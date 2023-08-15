@@ -10,12 +10,12 @@ public class Question_02_13 {
         Scanner input = new Scanner(System.in);
         System.out.print("Enter the monthly saving amount: ");
         savingAmount = input.nextDouble();
-        savingAmount = savingAmount + savingAmount * interestRate + 100;
-        savingAmount = savingAmount + savingAmount * interestRate + 100;
-        savingAmount = savingAmount + savingAmount * interestRate + 100;
-        savingAmount = savingAmount + savingAmount * interestRate + 100;
-        savingAmount = savingAmount + savingAmount * interestRate + 100;
-        savingAmount = savingAmount + savingAmount * interestRate;
+        savingAmount = savingAmount * (1 + interestRate) + 100;
+        savingAmount = savingAmount * (1 + interestRate) + 100;
+        savingAmount = savingAmount * (1 + interestRate) + 100;
+        savingAmount = savingAmount * (1 + interestRate) + 100;
+        savingAmount = savingAmount * (1 + interestRate) + 100;
+        savingAmount = savingAmount * (1 + interestRate);
         System.out.println("After the sixth month, the account value is $" + savingAmount);
     }
 }
