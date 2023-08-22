@@ -1,7 +1,7 @@
 package week3;
-public class bmi {
+
+public class Question_03_13 {
     public static void main(String[] args) {
         
-        System.out.println("Height in inches: ");
     }
 }
