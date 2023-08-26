@@ -5,21 +5,23 @@ import java.util.Scanner;
 public class GuessGame{
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        int a = (int) (Math.random()*100);
+        int a = 20;
         boolean even = true;
-        while (even){
 
-            System.out.println("Guess a number: ");
-            int guess = input.nextInt();
-            if (guess > a)
-                System.out.println("reduce your number");
-            else if (guess < a)
-                System.out.println("increase your number");
-            else {
-                System.out.println("congrast");
-                even = false;
-            }
-        }
+        if(a>51)
+            System.out.println("a");
+        else if (a<50)
+            System.out.println("b");
+        else if (a>10)
+            System.out.println("c");
+        else if (a>20)
+            System.out.println("d");
+        else if (a>25)
+            System.out.println("e");
+
+
+
+    }
     }
 
-}
+

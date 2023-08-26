@@ -11,14 +11,19 @@ public class Question_03_07 {
         int dime;
         int nickel;
         int penny;
+
         String dollars = " dollars";
         String quarters = " quarters";
         String dimes = " dimes";
         String nickels = " nickels";
         String pennies = " pennies";
+
         Scanner input = new Scanner(System.in);
+
         System.out.print("Enter the amount (e.g 11.56) : ");
+
         amountOfMoney = input.nextDouble();
+
         remainingAmount =(int) (amountOfMoney * 100);
         dollar = (int) amountOfMoney;
         if( dollar == 1 ) dollars = " dollar";
