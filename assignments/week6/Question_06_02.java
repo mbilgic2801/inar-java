@@ -7,13 +7,14 @@ public class Question_06_02 {
         Scanner input = new Scanner(System.in);
         System.out.print("Enter an integer: ");
         int number = input.nextInt();
-        System.out.printf("The sum of the digits in %d is %d",number,sumDigits(number));
+        System.out.printf("The sum of the digits in %d is %d", number, sumDigits(number));
     }
-    public static int sumDigits(long n){
-        int sum=0;
-        while(n>0){
-            sum += n%10;
-            n/=10;
+
+    public static int sumDigits(long n) {
+        int sum = 0;
+        while (n > 0) {
+            sum += n % 10;
+            n /= 10;
         }
         return sum;
     }
