@@ -29,10 +29,12 @@ public class Question_06_24 {
                 if (month == 12) {
                     month = 1;
                     year++;
-                } else {
+                }
+                else {
                     month++;
                 }
-            } else {
+            }
+            else {
                 day += days;
                 days = 0;
             }
