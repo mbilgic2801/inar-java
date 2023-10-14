@@ -2,7 +2,7 @@ package week5;
 
 import java.util.Scanner;
 
-public class Question_06_28 {
+public class Question_05_28 {
     public static void main(String[] args) {
         Scanner input= new Scanner(System.in);
         System.out.print("Enter year: (e.g., 2012): ");
