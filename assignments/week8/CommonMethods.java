@@ -26,6 +26,22 @@ public class CommonMethods {
             System.out.println();
         }
     }
+    public static void printArray(byte[][] array){
+        for (int i = 0; i < array.length ; i++) {
+            for (int j = 0; j < array[i].length; j++) {
+                System.out.print(array[i][j]+" ");
+            }
+            System.out.println();
+        }
+    }
+    public static void printArray(char[][] array){
+        for (int i = 0; i < array.length ; i++) {
+            for (int j = 0; j < array[i].length; j++) {
+                System.out.print(array[i][j]+" ");
+            }
+            System.out.println();
+        }
+    }
     public static void printArray(double[][] array){
         for (int i = 0; i < array.length ; i++) {
             for (int j = 0; j < array[i].length; j++) {
@@ -47,6 +63,14 @@ public class CommonMethods {
         for (int i = 0; i < matrix.length ; i++) {
             for (int j = 0; j <matrix[0].length ; j++) {
                 matrix[i][j]=input.nextDouble();
+            }
+        }
+    }
+    public static void takeInput(byte[][] matrix){
+        Scanner input=new Scanner(System.in);
+        for (int i = 0; i < matrix.length ; i++) {
+            for (int j = 0; j <matrix[0].length ; j++) {
+                matrix[i][j]=input.nextByte();
             }
         }
     }

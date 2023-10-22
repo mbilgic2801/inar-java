@@ -13,8 +13,8 @@ public class Question_08_08 {
         int[][] pointCombination=new int[combination][2];
         double[] distance = new double[combination];
         determineDistances(points, pointCombination, distance);
-        //Question_08_07.sortDueToDistance(pointCombination,distance);
-        //Question_08_07.printMinimumDistances(points,distance,pointCombination);
+        sortDueToDistance(pointCombination,distance);
+        printMinimumDistances(points,distance,pointCombination);
 
     }
     public static void determineDistances(double[][] points, int[][] pointCombination, double[] distance) {
@@ -28,5 +28,34 @@ public class Question_08_08 {
             }
         }
 
+    }
+    public static void sortDueToDistance(int[][] pointCombination, double[] distance) {
+        int[] tempInt;
+        double tempDouble;
+        for (int j = 0; j < distance.length; j++) {
+            for (int i = j; i < distance.length; i++) {
+                if (distance[j] > distance[i]) {
+                    tempDouble = distance[i];
+                    distance[i] = distance[j];
+                    distance[j] = tempDouble;
+                    tempInt = pointCombination[i];
+                    pointCombination[i] = pointCombination[j];
+                    pointCombination[j] = tempInt;
+
+                }
+            }
+        }
+    }
+    public static void printMinimumDistances(double[][] points, double[] distance,int[][] pointCombination){
+        for (int i = 0; i < distance.length; i++) {
+
+            System.out.println("The closest two points are (" +
+                    points[pointCombination[i][0]][0] + "," + points[pointCombination[i][0]][1] +") and (" +
+                    points[pointCombination[i][1]][0] + "," + points[pointCombination[i][1]][1] +"}");
+            if(distance[i]!=distance[i+1]){
+                System.out.println("Their distance is "+distance[i]);
+                return;
+            }
+        }
     }
 }

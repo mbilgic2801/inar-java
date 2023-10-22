@@ -10,11 +10,11 @@ public class Question_07_29 {
 
         int counter=0;
         //Question_07_31.printArray(cards);
-        while (sum[0]!=4){
+        while (sum[0]!=24){
          pickFourCards(cards,sum);
         counter++;
         }
-        System.out.println(counter+". seferde 4 ası yakaladın");
+        System.out.println(counter+". seferde 24 toplamı yakaladın");
     }
 
     private static void pickFourCards(int[] cards,int[] sum) {
