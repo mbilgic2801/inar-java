@@ -2,7 +2,7 @@ package week2;
 
 import java.util.Scanner;
 
-public class Question_02_12 {
+public class    Question_02_12 {
 
     public static void main(String[] args) {
         double speed;

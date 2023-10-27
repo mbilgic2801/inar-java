@@ -34,6 +34,7 @@ public class CommonMethods {
             System.out.println();
         }
     }
+
     public static void printArray(char[][] array){
         for (int i = 0; i < array.length ; i++) {
             for (int j = 0; j < array[i].length; j++) {
@@ -50,11 +51,25 @@ public class CommonMethods {
             System.out.println();
         }
     }
+    public static void takeInput(double[] matrix){
+        Scanner input=new Scanner(System.in);
+        for (int i = 0; i < matrix.length; i++) {
+            matrix[i]=input.nextDouble();
+        }
+    }
     public static void takeInput(int[][] matrix){
         Scanner input=new Scanner(System.in);
         for (int i = 0; i < matrix.length ; i++) {
             for (int j = 0; j <matrix[0].length ; j++) {
                 matrix[i][j]=input.nextInt();
+            }
+        }
+    }
+    public static void takeInput(char[][] matrix){
+        Scanner input=new Scanner(System.in);
+        for (int i = 0; i < matrix.length ; i++) {
+            for (int j = 0; j <matrix[0].length ; j++) {
+                matrix[i][j]=input.next().charAt(0);
             }
         }
     }
@@ -65,6 +80,7 @@ public class CommonMethods {
                 matrix[i][j]=input.nextDouble();
             }
         }
+        System.out.print("");
     }
     public static void takeInput(byte[][] matrix){
         Scanner input=new Scanner(System.in);
@@ -72,6 +88,35 @@ public class CommonMethods {
             for (int j = 0; j <matrix[0].length ; j++) {
                 matrix[i][j]=input.nextByte();
             }
+        }
+    }
+    public static void bubbleSort(int[] array) {
+        for (int j= array.length-1; j>=0;j--) {
+
+            for (int k = 0; k < j; k++) {
+                int temp=array[k];
+                if(array[k]>array[k+1]){
+                    array[k]=array[k+1];
+                    array[k+1]=temp;
+                }
+
+            }
+
+        }
+    }
+
+    public static void bubbleSort(double[] array) {
+        for (int j= array.length-1; j>=0;j--) {
+
+            for (int k = 0; k < j; k++) {
+                double temp=array[k];
+                if(array[k]>array[k+1]){
+                    array[k]=array[k+1];
+                    array[k+1]=temp;
+                }
+
+            }
+
         }
     }
     public static void orderScores(int[][] scores) {
