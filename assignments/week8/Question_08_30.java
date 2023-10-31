@@ -22,7 +22,7 @@ public class Question_08_30 {
             rightSide[i]=input.nextDouble();
         }
     }
-    private static void solveEquation(double[][] leftSide, double[] rightSide) {
+    public static void solveEquation(double[][] leftSide, double[] rightSide) {
         double divider=leftSide[0][0]*leftSide[1][1]-leftSide[0][1]*leftSide[1][0];
         if(divider==0){
             System.out.println("The equation has no solution");

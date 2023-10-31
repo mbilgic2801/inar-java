@@ -51,6 +51,12 @@ public class CommonMethods {
             System.out.println();
         }
     }
+    public static void printArray(double[] array){
+        for (int i = 0; i < array.length; i++) {
+            System.out.print(array[i]+" ");
+        }
+        System.out.println();
+    }
     public static void takeInput(double[] matrix){
         Scanner input=new Scanner(System.in);
         for (int i = 0; i < matrix.length; i++) {
