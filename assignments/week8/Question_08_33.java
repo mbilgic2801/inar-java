@@ -68,8 +68,6 @@ public class Question_08_33 {
         CommonMethods.printArray(center);
         return center;
     }
-
-
     public static double findArea(double[] vertex, double[] vertex1, double[] center) {
         double[] sides=new double[3];
         sides[0]=CommonMethods.distance2D(vertex,vertex1);
