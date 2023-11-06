@@ -19,15 +19,16 @@ public class Question_08_14 {
         majorDiagonalSameNumber(matrix);
         subDiagonalSameNumber(matrix);
     }
+
     private static void subDiagonalSameNumber(byte[][] matrix) {
         int zeroCounter = 0;
         int oneCounter = 0;
         boolean isAllDifferent = true;
-        for (int i = 0,j= matrix.length-1; i < matrix.length; i++,j--) {
-            if(matrix[i][j]==0){
+        for (int i = 0, j = matrix.length - 1; i < matrix.length; i++, j--) {
+            if (matrix[i][j] == 0) {
                 zeroCounter++;
             }
-            if(matrix[i][j]==1){
+            if (matrix[i][j] == 1) {
                 oneCounter++;
             }
 
@@ -44,15 +45,16 @@ public class Question_08_14 {
             System.out.println("No same numbers on sub diagonal");
         }
     }
+
     private static void majorDiagonalSameNumber(byte[][] matrix) {
         int zeroCounter = 0;
         int oneCounter = 0;
         boolean isAllDifferent = true;
         for (int i = 0; i < matrix.length; i++) {
-            if(matrix[i][i]==0){
+            if (matrix[i][i] == 0) {
                 zeroCounter++;
             }
-            if(matrix[i][i]==1){
+            if (matrix[i][i] == 1) {
                 oneCounter++;
             }
 
@@ -69,6 +71,7 @@ public class Question_08_14 {
             System.out.println("No same numbers on major diagonal");
         }
     }
+
     private static void columnSameNumber(byte[][] matrix) {
         boolean isAllDifferent = true;
         for (int i = 0; i < matrix.length; i++) {
@@ -96,6 +99,7 @@ public class Question_08_14 {
             System.out.println("No same numbers on a column");
         }
     }
+
     private static void rowSameNumbers(byte[][] matrix) {
         boolean isAllDifferent = true;
         for (int i = 0; i < matrix.length; i++) {

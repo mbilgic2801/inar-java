@@ -31,15 +31,15 @@ public class Question_08_31 {
         CommonMethods.printArray(rightSide);
         System.out.println("************");
     }
+
     public static void solveEquation(double[][] leftSide, double[] rightSide) {
-        double divider=leftSide[0][0]*leftSide[1][1]-leftSide[0][1]*leftSide[1][0];
-        if(divider==0){
+        double divider = leftSide[0][0] * leftSide[1][1] - leftSide[0][1] * leftSide[1][0];
+        if (divider == 0) {
             System.out.println("The two lines are parallel");
-        }
-        else {
-            double x=(rightSide[0]*leftSide[1][1]-rightSide[1]*leftSide[0][1])/divider;
-            double y=(-rightSide[1]*leftSide[0][0]+rightSide[0]*leftSide[1][0])/divider;
-            System.out.printf("The intersecting point is at (%.5f, %.5f) ",x,y);
+        } else {
+            double x = (rightSide[0] * leftSide[1][1] - rightSide[1] * leftSide[0][1]) / divider;
+            double y = (-rightSide[1] * leftSide[0][0] + rightSide[0] * leftSide[1][0]) / divider;
+            System.out.printf("The intersecting point is at (%.5f, %.5f) ", x, y);
         }
     }
 }

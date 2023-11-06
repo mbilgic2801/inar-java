@@ -28,8 +28,8 @@ public class Question_08_36 {
         //row checker and char elimination
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < n; j++) {
-                if (!str.contains(""+matrix[i][j])) {
-                    System.out.printf("Wrong input: the letters must be from A to %c",'A'+n-1);
+                if (!str.contains("" + matrix[i][j])) {
+                    System.out.printf("Wrong input: the letters must be from A to %c", 'A' + n - 1);
                     return;
                 }
                 counter[i][0] += matrix[i][j];

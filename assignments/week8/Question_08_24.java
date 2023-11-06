@@ -8,7 +8,7 @@ public class Question_08_24 {
         int[][] sudoku = new int[9][9];
         System.out.println("Enter a Sudoku puzzle solution:");
         CommonMethods.takeInput(sudoku);
-        System.out.printf("%s solution",(isValid(sudoku)?"Valid":"Invalid"));
+        System.out.printf("%s solution", (isValid(sudoku) ? "Valid" : "Invalid"));
         /*String numbers = "123456789";
         System.out.println(numbers);
         numbers = numbers.substring(0, numbers.indexOf("5")) + numbers.substring(numbers.indexOf("5"));
@@ -25,12 +25,12 @@ public class Question_08_24 {
         int counter = 0;
         boolean isOk = true;
         int[][] cell = new int[3][3];
-        for (int i = 0; i < sudoku.length; i+=3) {
-            for (int j = 0; j < sudoku.length; j+=3) {
-                    fillCell(cell,sudoku,i,j);
-                    isOk= checkcell(cell);
+        for (int i = 0; i < sudoku.length; i += 3) {
+            for (int j = 0; j < sudoku.length; j += 3) {
+                fillCell(cell, sudoku, i, j);
+                isOk = checkcell(cell);
             }
-            if(!isOk){
+            if (!isOk) {
                 return false;
             }
         }
@@ -40,7 +40,7 @@ public class Question_08_24 {
     private static void fillCell(int[][] cell, int[][] sudoku, int i, int j) {
         for (int k = 0; k < cell.length; k++) {
             for (int l = 0; l < cell[k].length; l++) {
-                cell[k][l]=sudoku[i+k][j+l];
+                cell[k][l] = sudoku[i + k][j + l];
             }
         }
     }
@@ -50,7 +50,9 @@ public class Question_08_24 {
         for (int i = 0; i < cell.length; i++) {
 
             for (int j = 0; j < cell[i].length; j++) {
-                if(!numbers.contains(""+cell[i][j])){return false;}
+                if (!numbers.contains("" + cell[i][j])) {
+                    return false;
+                }
                 numbers = numbers.substring(0, numbers.indexOf(cell[i][j] + "")) + numbers.substring(numbers.indexOf(cell[i][j] + "") + 1);
             }
 
@@ -66,7 +68,9 @@ public class Question_08_24 {
         for (int i = 0; i < sudoku.length; i++) {
             String numbers = "123456789";
             for (int j = 0; j < sudoku[i].length; j++) {
-                if(!numbers.contains(""+sudoku[j][i])){return false;}
+                if (!numbers.contains("" + sudoku[j][i])) {
+                    return false;
+                }
                 numbers = numbers.substring(0, numbers.indexOf(sudoku[j][i] + "")) + numbers.substring(numbers.indexOf(sudoku[j][i] + "") + 1);
             }
             if (!numbers.equals("")) {
@@ -81,7 +85,9 @@ public class Question_08_24 {
         for (int i = 0; i < sudoku.length; i++) {
             String numbers = "123456789";
             for (int j = 0; j < sudoku[i].length; j++) {
-                if(!numbers.contains(""+sudoku[i][j])){return false;}
+                if (!numbers.contains("" + sudoku[i][j])) {
+                    return false;
+                }
                 numbers = numbers.substring(0, numbers.indexOf(sudoku[i][j] + "")) + numbers.substring(numbers.indexOf(sudoku[i][j] + "") + 1);
             }
             if (!numbers.equals("")) {

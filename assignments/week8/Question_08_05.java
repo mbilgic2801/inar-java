@@ -4,16 +4,16 @@ import java.util.Scanner;
 
 public class Question_08_05 {
     public static void main(String[] args) {
-        Scanner input=new Scanner(System.in);
-        double[][] matrix1=new double[3][3];
-        double[][] matrix2=new double[3][3];
+        Scanner input = new Scanner(System.in);
+        double[][] matrix1 = new double[3][3];
+        double[][] matrix2 = new double[3][3];
         System.out.print("Enter matrix1: ");
         CommonMethods.takeInput(matrix1);
         System.out.print("Enter matrix2: ");
         CommonMethods.takeInput(matrix2);
-        double[][] sumOfMatrix=addMatrix(matrix1,matrix2);
+        double[][] sumOfMatrix = addMatrix(matrix1, matrix2);
         System.out.println("The matrices are added as follows");
-        printOperation(matrix1,matrix2,sumOfMatrix);
+        printOperation(matrix1, matrix2, sumOfMatrix);
 
 
     }
@@ -22,15 +22,15 @@ public class Question_08_05 {
 
         for (int i = 0; i < matrix1.length; i++) {
             for (int j = 0; j < matrix1[0].length; j++) {
-                System.out.printf("%-4.1f ",matrix1[i][j]);
+                System.out.printf("%-4.1f ", matrix1[i][j]);
             }
-            System.out.printf("  %-4s  ",(i==matrix1.length/2)?"+":" ");
+            System.out.printf("  %-4s  ", (i == matrix1.length / 2) ? "+" : " ");
             for (int j = 0; j < matrix2[0].length; j++) {
-                System.out.printf("%4.1f ",matrix2[i][j]);
+                System.out.printf("%4.1f ", matrix2[i][j]);
             }
-            System.out.printf("  %-4s  ",(i==matrix1.length/2)?"=":" ");
+            System.out.printf("  %-4s  ", (i == matrix1.length / 2) ? "=" : " ");
             for (int j = 0; j < sumOfMatrix[0].length; j++) {
-                System.out.printf("%4.1f ",sumOfMatrix[i][j]);
+                System.out.printf("%4.1f ", sumOfMatrix[i][j]);
             }
             System.out.println();
 
@@ -38,10 +38,10 @@ public class Question_08_05 {
     }
 
     public static double[][] addMatrix(double[][] matrix1, double[][] matrix2) {
-        double[][] sum=new double[matrix1.length][matrix1[0].length];
+        double[][] sum = new double[matrix1.length][matrix1[0].length];
         for (int i = 0; i < sum.length; i++) {
-            for (int j = 0; j <sum[0].length ; j++) {
-                sum[i][j]=matrix1[i][j]+matrix2[i][j];
+            for (int j = 0; j < sum[0].length; j++) {
+                sum[i][j] = matrix1[i][j] + matrix2[i][j];
             }
         }
         return sum;

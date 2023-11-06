@@ -23,122 +23,133 @@ public class Question_08_09 {
         }
 
     }
+
     public static void displayBoard(char[][] board, boolean[] isNotFinished, boolean[] isTurnForX) {
         Scanner input = new Scanner(System.in);
         byte row;
         byte column;
         printBoard(board);
 
-        if(isTurnForX[0]){
+        if (isTurnForX[0]) {
             System.out.print("Enter a row(0,1, or 2) for player  X: ");
-            row=input.nextByte();
+            row = input.nextByte();
             System.out.print("Enter a column(0,1, or 2) for player  X: ");
-            column=input.nextByte();
-            board[row][column]='X';
-        }
-        else {
+            column = input.nextByte();
+            board[row][column] = 'X';
+        } else {
             System.out.print("Enter a row(0,1, or 2) for player  O: ");
-            row=input.nextByte();
+            row = input.nextByte();
             System.out.print("Enter a column(0,1, or 2) for player  O ");
-            column=input.nextByte();
-            board[row][column]='O';
+            column = input.nextByte();
+            board[row][column] = 'O';
         }
-        isTurnForX[0]=!isTurnForX[0];
-        isThereWinnerOrDraw(board,isNotFinished);
+        isTurnForX[0] = !isTurnForX[0];
+        isThereWinnerOrDraw(board, isNotFinished);
 
 
     }
+
     public static void printBoard(char[][] board) {
         for (int i = 0; i < board.length; i++) {
             System.out.println("-------------");
             System.out.print("| ");
             for (int j = 0; j < board[i].length; j++) {
-                System.out.printf("%c | ",board[i][j]);
+                System.out.printf("%c | ", board[i][j]);
             }
             System.out.println();
         }
     }
-    public static boolean isDraw(char[][] board,boolean[] isNotFinished) {
-        if(isNotFinished[0]){
-        int counter=0;
-        for (int i = 0; i < board.length ; i++) {
-            for (int j = 0; j < board[i].length ; j++) {
-                if(board[i][j]==' '){
-                    counter++;
+
+    public static boolean isDraw(char[][] board, boolean[] isNotFinished) {
+        if (isNotFinished[0]) {
+            int counter = 0;
+            for (int i = 0; i < board.length; i++) {
+                for (int j = 0; j < board[i].length; j++) {
+                    if (board[i][j] == ' ') {
+                        counter++;
+                    }
                 }
             }
-        }
-        if(counter==0){
-            isNotFinished[0]=false;
-            printBoard(board);
-            return true;
-        }
+            if (counter == 0) {
+                isNotFinished[0] = false;
+                printBoard(board);
+                return true;
+            }
         }
         return false;
 
     }
-    public static void isThereWinnerOrDraw(char[][] board,boolean[] isNotFinished) {
-        isXWinner(board,isNotFinished);
-        isYWinner(board,isNotFinished);
-        if(isDraw(board,isNotFinished)){
+
+    public static void isThereWinnerOrDraw(char[][] board, boolean[] isNotFinished) {
+        isXWinner(board, isNotFinished);
+        isYWinner(board, isNotFinished);
+        if (isDraw(board, isNotFinished)) {
             System.out.println("Drawwwww");
         }
     }
+
     public static void isYWinner(char[][] board, boolean[] isNotFinished) {
-        if(checkRow(board,'O')||checkColumn(board,'O')||checkDiagonal(board,'O')){
-            isNotFinished[0]=false;
+        if (checkRow(board, 'O') || checkColumn(board, 'O') || checkDiagonal(board, 'O')) {
+            isNotFinished[0] = false;
             printBoard(board);
             System.out.println("Player 0 wins");
         }
     }
+
     public static void isXWinner(char[][] board, boolean[] isNotFinished) {
 
-        if(checkRow(board,'X')||checkColumn(board,'X')||checkDiagonal(board,'X')){
-            isNotFinished[0]=false;
+        if (checkRow(board, 'X') || checkColumn(board, 'X') || checkDiagonal(board, 'X')) {
+            isNotFinished[0] = false;
             printBoard(board);
             System.out.println("Player X wins");
         }
 
 
     }
+
     public static boolean checkDiagonal(char[][] board, char x) {
-        return subDiagonal(board,x)||majorDiagonal(board,x);
+        return subDiagonal(board, x) || majorDiagonal(board, x);
     }
+
     public static boolean majorDiagonal(char[][] board, char x) {
-        return board[0][0]==x&&board[1][1]==x&&board[2][2]==x;
+        return board[0][0] == x && board[1][1] == x && board[2][2] == x;
     }
+
     public static boolean subDiagonal(char[][] board, char x) {
-        return board[0][2]==x&&board[1][1]==x&&board[2][0]==x;
+        return board[0][2] == x && board[1][1] == x && board[2][0] == x;
     }
+
     public static boolean checkColumn(char[][] board, char x) {
-        for (int i = 0; i < board.length ; i++) {
-            int counter=0;
-            for (int j = 0; j < board.length ; j++) {
-                if(board[j][i]==x){
+        for (int i = 0; i < board.length; i++) {
+            int counter = 0;
+            for (int j = 0; j < board.length; j++) {
+                if (board[j][i] == x) {
                     counter++;
                 }
             }
-            if(counter==3){
+            if (counter == 3) {
                 return true;
             }
         }
         return false;
     }
+
     public static boolean checkRow(char[][] board, char x) {
         for (int i = 0; i < board.length; i++) {
-            int counter=0;
-            for (int j = 0; j < board[i].length ; j++) {
-                if(board[i][j]==x){
+            int counter = 0;
+            for (int j = 0; j < board[i].length; j++) {
+                if (board[i][j] == x) {
                     counter++;
                 }
             }
-            if(counter==3){
+            if (counter == 3) {
                 return true;
             }
         }
         return false;
 
     }
+
     public static void clearBoard(char[][] board) {
         for (int i = 0; i < board.length; i++) {
             for (int j = 0; j < board[i].length; j++) {

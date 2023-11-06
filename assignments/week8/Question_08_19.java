@@ -59,7 +59,7 @@ public class Question_08_19 {
             for (int j = 0; j < matrix.length; j++) {
                 int a = matrix[i][j];
                 if (matrix[i + 1][j] == a && matrix[i + 2][j] == a && matrix[i + 3][j] == a) {
-                    System.out.printf("column consecutive (%d , %d) to (%d , %d)\n",i,j,i+3,j);
+                    System.out.printf("column consecutive (%d , %d) to (%d , %d)\n", i, j, i + 3, j);
                     return true;
                 }
             }
@@ -75,7 +75,7 @@ public class Question_08_19 {
             for (int j = 0; j < matrix[i].length - 3; j++) {
                 int a = matrix[i][j];
                 if (matrix[i][j + 1] == a && matrix[i][j + 2] == a && matrix[i][j + 3] == a) {
-                    System.out.printf("row consecutive (%d , %d) to (%d , %d)\n",i,j,i,j+3);
+                    System.out.printf("row consecutive (%d , %d) to (%d , %d)\n", i, j, i, j + 3);
                     return true;
                 }
             }

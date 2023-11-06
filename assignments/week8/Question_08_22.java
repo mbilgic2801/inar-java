@@ -20,13 +20,13 @@ public class Question_08_22 {
 
     private static boolean checkColumnsEven(byte[][] matrix) {
         for (int i = 0; i < matrix.length; i++) {
-            int counter=0;
+            int counter = 0;
             for (int j = 0; j < matrix[i].length; j++) {
-                if(matrix[j][i]==1){
+                if (matrix[j][i] == 1) {
                     counter++;
                 }
             }
-            if(counter%2==1){
+            if (counter % 2 == 1) {
                 return false;
             }
         }
@@ -35,13 +35,13 @@ public class Question_08_22 {
 
     private static boolean checkRowsEven(byte[][] matrix) {
         for (int i = 0; i < matrix.length; i++) {
-            int counter=0;
+            int counter = 0;
             for (int j = 0; j < matrix[i].length; j++) {
-                if(matrix[i][j]==1){
+                if (matrix[i][j] == 1) {
                     counter++;
                 }
             }
-            if(counter%2==1){
+            if (counter % 2 == 1) {
                 return false;
             }
         }
