@@ -138,7 +138,22 @@ public class CommonMethods {
 
         }
     }
+public static void selectionSort(int[] array){
+    for (int i = 0; i < array.length-1 ; i++) {
+        int min=array[i];
+        int index=i;
+        for (int j = i+1; j < array.length ; j++) {
+            if(min>array[j]){
+                min=array[j];
+                index=j;
 
+            }
+        }
+        array[index]=array[i];
+        array[i]=min;
+
+    }
+    }
     public static void orderScores(int[][] scores) {
         int[] temp = new int[2];
         for (int j = 0; j < scores.length; j++) {
