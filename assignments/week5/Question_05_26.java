@@ -19,6 +19,6 @@ public class Question_05_26 {
                     System.out.println("e at i=" + i + " is " + sumOfseries);
                 }
             }
-        System.out.println("Java's e is "+Math.E);
+        System.out.println("Java's e is      "+Math.E);
     }
 }
