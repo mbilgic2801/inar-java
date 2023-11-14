@@ -8,7 +8,7 @@ public class Account_09_07 {
     private double annualInterestRate = 0;
     private Date dateCreated;
 
-    Account_09_07() {
+    public Account_09_07() {
         this.dateCreated = new Date();
     }
 
@@ -17,7 +17,10 @@ public class Account_09_07 {
         this.balance = balance;
         this.dateCreated = new Date();
     }
-
+    public String toString(){
+        return  "ID :"+id+"\n"+
+                "Balance is $"+balance;
+    }
     public int getId() {
         return id;
     }
