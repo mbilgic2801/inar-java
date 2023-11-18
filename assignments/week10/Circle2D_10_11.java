@@ -17,21 +17,26 @@ public class Circle2D_10_11 {
         this.radius = radius;
     }
 
-    double getArea(){
-        return Math.PI*radius*radius;
+    double getArea() {
+        return Math.PI * radius * radius;
     }
-    double getPerimeter(){
-        return 2*Math.PI*radius;
+
+    double getPerimeter() {
+        return 2 * Math.PI * radius;
     }
-    public boolean contains(double x,double y){
-        return radius>=Math.sqrt((Math.pow(this.x-x,2))+(Math.pow(this.y-y,2)));
+
+    public boolean contains(double x, double y) {
+        return radius >= Math.sqrt((Math.pow(this.x - x, 2)) + (Math.pow(this.y - y, 2)));
     }
-    public boolean contains(Circle2D_10_11 circle){
-        return radius>=Math.sqrt((Math.pow(circle.x-x,2))+(Math.pow(circle.y-y,2)))+circle.radius;
+
+    public boolean contains(Circle2D_10_11 circle) {
+        return radius >= Math.sqrt((Math.pow(circle.x - x, 2)) + (Math.pow(circle.y - y, 2))) + circle.radius;
     }
-    public boolean overlaps(Circle2D_10_11 circle){
-        return radius+circle.radius>Math.sqrt((Math.pow(circle.x-x,2))+(Math.pow(circle.y-y,2)))+circle.radius;
+
+    public boolean overlaps(Circle2D_10_11 circle) {
+        return radius + circle.radius > Math.sqrt((Math.pow(circle.x - x, 2)) + (Math.pow(circle.y - y, 2))) + circle.radius;
     }
+
     public double getX() {
         return x;
     }
@@ -54,5 +59,9 @@ public class Circle2D_10_11 {
 
     public void setRadius(double radius) {
         this.radius = radius;
+    }
+
+    public String toString() {
+        return "Radius: " + radius;
     }
 }
