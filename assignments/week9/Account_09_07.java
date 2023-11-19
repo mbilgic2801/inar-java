@@ -68,10 +68,10 @@ public class Account_09_07 {
     public void accountStatement() {
         System.out.println("          Account Statement :");
         System.out.println("------------------------------------------");
-        System.out.printf("Account ID    :%d\n", this.id);
-        System.out.printf("Date created  :%s\n", this.getDateCreated().toString());
-        System.out.printf("Balance       :%.2f\n", this.balance);
-        System.out.printf("Monthly Interest:%.2f\n", this.getMonthlyInterest());
+        System.out.printf("Account ID    : %d\n", this.id);
+        System.out.printf("Date created  : %s\n", this.getDateCreated().toString());
+        System.out.printf("Balance       : $%.2f\n", this.balance);
+        System.out.printf("Monthly Interest: $%.2f\n", this.getMonthlyInterest());
 
     }
 }

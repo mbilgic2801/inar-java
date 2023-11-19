@@ -15,6 +15,7 @@ public class LinearEquation_09_11 {
             System.out.println("The equation has no solution");
         }
     }
+
     boolean isSolvable(){
         return (a*d-b-c)!=0;
     }

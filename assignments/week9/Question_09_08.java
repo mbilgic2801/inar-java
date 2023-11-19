@@ -13,6 +13,7 @@ public class Question_09_08 {
         b.setRadius(5);
         b.setSpeed(2);
         System.out.println(a.toString());
+        System.out.println("-------------------");
         System.out.println(b.toString());
     }
 }
