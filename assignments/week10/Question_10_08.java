@@ -11,6 +11,7 @@ public class Question_10_08 {
         };
         System.out.println("                       2009 Taxes");
         System.out.println("Income     Status 0    Status 1    Status 2    Status 3");
+        System.out.println("-------------------------------------------------------------");
         for (int i = 50000; i <60001 ; i+=1000) {
             System.out.print(i+"     ");
             for (int j = 0; j < 4; j++) {
