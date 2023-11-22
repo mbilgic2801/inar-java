@@ -39,4 +39,25 @@ public class MyRectangle2D {
     public boolean overlaps(MyRectangle2D r){
         return true;//to be continued
     }
+    public static MyRectangle2D getRectangle(double[][] points){
+        double tempXmin=points[0][0];
+        double tempYmin=points[0][1];
+        double tempXmax=points[0][0];
+        double tempYmax=points[0][1];
+        for (int i = 1; i < points.length; i++) {
+            if(tempXmin>points[i][0]){
+                tempXmin=points[i][0];
+            }
+            if(tempXmax<points[i][0]){
+                tempXmax=points[i][0];
+            }
+            if(tempYmin>points[i][1]){
+                tempYmin=points[i][1];
+            }
+            if(tempYmax<points[i][1]){
+                tempYmax=points[i][1];
+            }
+        }
+        return new MyRectangle2D((tempXmax+tempXmin)/2,(tempYmin+tempYmax)/2,(tempXmax-tempXmin),(tempYmax-tempYmin));
+    }
 }
