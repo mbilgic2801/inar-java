@@ -31,14 +31,10 @@ public class Question_07_01 {
     }
 
     public static char getCharOfGrade(int i, int bestGrade) {
-        if (i >= bestGrade - 10)
-            return 'A';
-        if (i >= bestGrade - 20)
-            return 'B';
-        if (i >= bestGrade - 30)
-            return 'C';
-        if (i >= bestGrade - 40)
-            return 'D';
+        if (i >= bestGrade - 10) return 'A';
+        if (i >= bestGrade - 20) return 'B';
+        if (i >= bestGrade - 30) return 'C';
+        if (i >= bestGrade - 40) return 'D';
         return 'F';
 
     }
@@ -49,5 +45,9 @@ public class Question_07_01 {
             max = Math.max(max, grade[i]);
         }
         return max;
+    }
+
+    public static boolean isValid(char c) {
+        return c == 'a';
     }
 }
