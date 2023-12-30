@@ -3,5 +3,7 @@
   <component name="VcsDirectoryMappings">
     <mapping directory="" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/assignments/MyMavenProject" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/inar.academy.weborder" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/inar.web" vcs="Git" />
   </component>
 </project>

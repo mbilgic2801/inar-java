@@ -1,6 +1,6 @@
 package week8;
 
-import android.app.admin.SystemUpdateInfo;
+
 import week6.Question_06_15;
 
 import java.util.Scanner;

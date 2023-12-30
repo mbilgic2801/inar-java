@@ -1,4 +1,4 @@
-package main;
+
 
 public class AgeRestrictionValidator {
     private static final int MIN_AGE = 18;

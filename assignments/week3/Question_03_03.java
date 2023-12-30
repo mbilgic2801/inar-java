@@ -1,6 +1,6 @@
 package week3;
 
-import android.provider.Settings;
+
 
 import java.util.Scanner;
 

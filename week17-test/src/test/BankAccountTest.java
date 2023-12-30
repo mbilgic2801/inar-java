@@ -1,4 +1,4 @@
-package test;
+
 import main.BankAccount;
 import org.junit.jupiter.api.*;
 public class BankAccountTest {

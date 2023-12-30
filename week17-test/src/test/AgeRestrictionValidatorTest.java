@@ -1,5 +1,5 @@
-package test;
-import main.AgeRestrictionValidator;
+
+import main.*;
 import org.junit.jupiter.api.*;
 public class AgeRestrictionValidatorTest {
     public static int testCaseCounter = 1;
